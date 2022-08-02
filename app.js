@@ -14,7 +14,8 @@ async function start(){
     // navTag.innerHTML = links.map(nav => navTemplate(nav)).join('')
 
     const articleTemplateAsString = await (await fetch('./templates/article.html')).text()
-    console.log(articleTemplateAsString)
+    const articleTemplate = createTemplate(articleTemplateAsString)
+    console.log(articleTemplate(data[0]))
 
 
     // console.log(data.map(article=>articleTemplate(article)))
