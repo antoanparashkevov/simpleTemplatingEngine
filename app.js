@@ -7,8 +7,7 @@ start()
 
 function start(){
     const main = document.querySelector('main')
-   console.log( data.map(article=>articleTemplate(article)))
-    main.innerHTML = 'Hello'
+    main.innerHTML = data.map(article=>articleTemplate(article)).join('')
 }
 function articleTemplate(article){
 
