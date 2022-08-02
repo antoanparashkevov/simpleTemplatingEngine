@@ -15,3 +15,18 @@ export const data = [
     "author": "Peter Johnson"
   }
 ]
+export const nav = [
+  {
+    href:'/',
+    label:'Home'
+  },
+  {
+    href:'/catalog',
+    label:'Catalog'
+  },
+  {
+    href:'/about',
+    label:'About'
+  },
+
+]

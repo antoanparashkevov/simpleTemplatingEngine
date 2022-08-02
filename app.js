@@ -1,6 +1,6 @@
 console.log('test')
 
-import {data} from './data.js'
+import {data, nav} from './data.js'
 
 
 start()
@@ -8,6 +8,8 @@ start()
 function start(){
     const main = document.querySelector('main')
     main.innerHTML = data.map(article=>articleTemplate(article)).join('')
+
+    console.log(data.map(article=>articleTemplate(article)))
 }
 function articleTemplate(article){
 
