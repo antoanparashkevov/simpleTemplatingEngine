@@ -1,4 +1,4 @@
-[
+export const data = [
   {
     "title": "First Article",
     "content": "Simple first content",
