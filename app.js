@@ -10,7 +10,6 @@ start()
 async function start(){
     const main = document.querySelector('main')
     const navTag= document.querySelector('nav ul')
-    // navTag.innerHTML = links.map(nav => navTemplate(nav)).join('')
 
     const articleTemplateAsString = await (await fetch('./templates/article.html')).text()
     const articleTemplate = createTemplate(articleTemplateAsString)
@@ -18,6 +17,13 @@ async function start(){
 
     main.innerHTML = data.map(article=>articleTemplate(article)).join('')
     console.log(data.map(article=>articleTemplate(article)))
+
+    const navTemplateAsString = await (await fetch('./templates/nav.html')).text()
+    const navTemplate = createTemplate(navTemplateAsString)
+    navTag.innerHTML = links.map(nav => navTemplate(nav)).join('')
+
+
+
 }
 // function articleTemplate(article){
 //
